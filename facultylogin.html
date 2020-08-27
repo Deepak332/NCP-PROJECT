@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Faculty Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toogle-btn" onclick="login()">LOGIN</button>
+				<button type="button" class="toogle-btn" onclick="register()">SIGNUP</button>
+			</div>
+			<div class="icon">
+			<img src="teacher.png">
+		</div>
+		<form class="input-group" id="login">
+			<input type="text" class="input-field" placeholder="User Id" required>
+			<input type="text" class="input-field" placeholder="Enter Password" required><br>
+			<input type="checkbox" class="check-box"><span>Remember Password</span>
+			<button type="submit" class="submit-btn">LOGIN</button>
+			
+		</form>
+		<form class="input-group" id="register">
+			<input type="text" class="input-field" placeholder="Faculty Id" required>
+			<input type="text" class="input-field" placeholder="User Name" required>
+			<input type="Email" class="input-field" placeholder="Email" required>
+			<input type="text" class="input-field" placeholder="Address" required>
+			<input type="text" class="input-field" placeholder="Enter Password" required>
+			<input type="text" class="input-field" placeholder="confirm Password" required>
+			<input type="number" class="input-field" placeholder="mobile number" required>
+			<input type="checkbox" class="check-box"><span> Agree Terms and condition</span>
+			<button type="submit" class="submit-btn">REGISTER</button>
+			
+		</form>
+			
+		</div>
+		
+	</div>
+	<script >
+		var x=document.getElementById("login");
+		var y=document.getElementById("register");
+		var z=document.getElementById("btn");
+
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+			x.style.button="250px"
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toogle-btn" onclick="login()">LOGIN</button>
+				<button type="button" class="toogle-btn" onclick="register()">SIGNUP</button>
+			</div>
+			<div class="icon">
+			<img src="student.png">
+		</div>
+		<form class="input-group" id="login" method="post" name="form" onsubmit="return validated()">
+			<input type="text" class="input-field"  id="user" placeholder="User Id" required>
+			<div id="email_error"></div>
+			<input type="text" class="input-field" id="Password" placeholder="Enter Password" required><br>
+			<div id="pass_error"></div>
+			<input type="checkbox" class="check-box"><span>Remember Password</span>
+			<button type="submit" class="submit-btn">LOGIN</button>
+			
+		</form>
+		<form class="input-group" id="register">
+			<input type="text" class="input-field" placeholder="User Name" required>
+			<input type="Email" class="input-field" placeholder="Email" required>
+			<input type="text" class="input-field" placeholder="Enter Password" required>
+			<input type="text" class="input-field" placeholder="confirm Password" required>
+
+			<input type="number" class="input-field" placeholder="mobile number" required>
+			<input type="Email" class="input-field" placeholder=" Parents Email" required>
+
+
+
+			<input type="checkbox" class="check-box"><span> Agree Terms and condition</span>
+			<button type="submit" class="submit-btn">REGISTER</button>
+			
+		</form>
+			
+		</div>
+		
+	</div>
+	<script >
+		var x=document.getElementById("login");
+		var y=document.getElementById("register");
+		var z=document.getElementById("btn");
+		var user = document.forms['form']['user'];
+		var Password = document.forms['form']['Password'];
+
+
+		var email_error = document.getElementById('email_error');
+		var pass_error = document.getElementById('email_error');
+
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+			x.style.button="250px"
+		}
+		function validated() {
+			if (user.value.length == "") {
+				
+				email_error.textContent = "user name is required";
+				user.focus();
+				return false;
+			}
+			if (user.value.length < 9) {
+				user.style.border = "1px solid red";
+				email_error.textContent = "**PLEASE ENTER CORRECT ID**";
+				user.focus();
+				return false;
+			}
+
+		}
+	</script>
+
+
+</body>
+</html>
